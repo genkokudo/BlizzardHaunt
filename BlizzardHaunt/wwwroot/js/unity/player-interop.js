@@ -104,8 +104,8 @@ export function init(config) {
         });
     };
 
-    //// 画面のbodyに生成した<script>タグを付け加える
-    //document.body.appendChild(script);
+    // 画面のbodyに生成した<script>タグを付け加える
+    document.body.appendChild(script);
     // ※これをやると、どんどん要素が増えてしまって画面遷移しても消えない。。。
     // 取り敢えずalertは切って、ページ遷移時に消すスクリプトを付けるとか。
 
@@ -114,7 +114,7 @@ export function init(config) {
     // <script src="Escape/Build/Escape.framework.js.br"></script>
 
     // Blazorの機能で遷移を検知して消す
-    unityTest.appendChild(script);
+    //unityTest.appendChild(script);
 }
 
 //// ページ遷移時にscriptを削除する

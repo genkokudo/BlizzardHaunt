@@ -51,6 +51,12 @@
     // ページ表示時に実行する
     protected override async Task OnInitializedAsync()
     {
+    }
+
+    // ページ表示後に実行する
+    // prerenderingが有効になっていると、JavaScript相互運用は OnAfterRenderAsync の時しか実行できないよ
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
         var config = new PlayerConfig("Escape", "My Revolution");
 
         var module = await JsRuntime.InvokeAsync<IJSObjectReference>(
