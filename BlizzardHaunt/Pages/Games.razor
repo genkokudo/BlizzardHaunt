@@ -1,6 +1,4 @@
-﻿@page "/counter"
-@using BlizzardHaunt.Unity;
-@inject IJSRuntime JsRuntime;
+﻿@page "/games"
 
 <PageTitle>My Revolution</PageTitle>
 
@@ -15,18 +13,10 @@
     <link rel="stylesheet" href="Escape/TemplateData/style.css">
 </HeadContent>
 
-<h1>Counter</h1>
+<h1>ゲーム展示室</h1>
 
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
+<button class="btn btn-primary" onclick="window.open('./Escape/index.html')">脱出ゲーム</button>
 
 @code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+    
 }
